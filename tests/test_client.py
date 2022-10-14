@@ -5,5 +5,5 @@ def test_client_import():
     assert True
 
 def test_StabilityInference_init():
-    class_instance = client.StabilityInference()
+    class_instance = client.StabilityInference(key='thisIsNotARealKey')
     assert True
