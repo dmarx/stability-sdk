@@ -33,3 +33,13 @@ def test_get_sampler_from_str_invalid():
         assert False
     except ValueError:
         assert True
+
+def test_truncate_fit():
+    client.truncate_fit(
+        prefix='foo', 
+        prompt='bar, 
+        ext='.baz', 
+        ts=0,
+        idx=0, 
+        max=99)
+    assert True
