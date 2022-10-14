@@ -26,3 +26,10 @@ def test_StabilityInference_init_nokey_insecure_host():
 def test_get_sampler_from_str_valid(sampler_name):
     client.get_sampler_from_str(s=sampler_name)
     assert True
+
+def test_get_sampler_from_str_invalid():
+    try:
+        client.get_sampler_from_str(s='not a real sampler')
+        assert False
+    except ValueError:
+        assert True
