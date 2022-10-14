@@ -8,14 +8,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - name: checkout maybe?
-      uses: actions/checkout@v2
-    - name: Set up Python
-      uses: actions/setup-python@v2
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
       with:
-        python-version: '3.7'
-        cache: 'pip'
-    - name: pytest
-      run: |
-        python -m pip install --upgrade pip pytest
-        pytest
+        python-version: '3.7' 
+    - run: python -m pytest
