@@ -18,3 +18,7 @@ def test_StabilityInference_init_nokey_error():
 def test_StabilityInference_init_nokey_insecure_host():
     class_instance = client.StabilityInference(host='foo.bar.baz')
     assert True
+
+def test_get_sampler_from_str():
+    client.get_sampler_from_str()
+    assert True
