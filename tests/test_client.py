@@ -46,22 +46,22 @@ def test_truncate_fit():
         max=99)
     assert True
 
-def test_image_to_prompt()
+def test_image_to_prompt():
     im = Image.new('RGB',(1,1))
     prompt = image_to_prompt(im, init=False, mask=False)
     assert isinstance(prompt, generation.Prompt)
 
-def test_image_to_prompt_init()
+def test_image_to_prompt_init():
     im = Image.new('RGB',(1,1))
     prompt = image_to_prompt(im, init=True, mask=False)
     assert isinstance(prompt, generation.Prompt)
 
-def test_image_to_prompt_mask()
+def test_image_to_prompt_mask():
     im = Image.new('RGB',(1,1))
     prompt = image_to_prompt(im, init=False, mask=True)
     assert isinstance(prompt, generation.Prompt)
 
-def test_image_to_prompt_init_mask()
+def test_image_to_prompt_init_mask():
     im = Image.new('RGB',(1,1))
     try:
         prompt = image_to_prompt(im, init=True, mask=True)
