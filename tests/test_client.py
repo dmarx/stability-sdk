@@ -48,23 +48,23 @@ def test_truncate_fit():
 
 def test_image_to_prompt():
     im = Image.new('RGB',(1,1))
-    prompt = image_to_prompt(im, init=False, mask=False)
+    prompt = client.image_to_prompt(im, init=False, mask=False)
     assert isinstance(prompt, generation.Prompt)
 
 def test_image_to_prompt_init():
     im = Image.new('RGB',(1,1))
-    prompt = image_to_prompt(im, init=True, mask=False)
+    prompt = client.image_to_prompt(im, init=True, mask=False)
     assert isinstance(prompt, generation.Prompt)
 
 def test_image_to_prompt_mask():
     im = Image.new('RGB',(1,1))
-    prompt = image_to_prompt(im, init=False, mask=True)
+    prompt = client.image_to_prompt(im, init=False, mask=True)
     assert isinstance(prompt, generation.Prompt)
 
 def test_image_to_prompt_init_mask():
     im = Image.new('RGB',(1,1))
     try:
-        prompt = image_to_prompt(im, init=True, mask=True)
+        prompt = client.image_to_prompt(im, init=True, mask=True)
         assert False
     except ValueError:
         assert True
