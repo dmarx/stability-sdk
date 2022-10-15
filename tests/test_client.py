@@ -39,7 +39,7 @@ def test_get_sampler_from_str_invalid():
 def test_truncate_fit():
     client.truncate_fit(
         prefix='foo', 
-        prompt='bar, 
+        prompt='bar', 
         ext='.baz', 
         ts=0,
         idx=0, 
